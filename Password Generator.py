@@ -15,11 +15,9 @@ class PWGenerator:
         self.checkbuttons()
         self.labels()
         self.spinbox_()
-
         self.buttons()
         self.scrollbar()
         self.listbox()
-
         self.mainloop()
 
     def checkbuttons(self):
@@ -104,8 +102,6 @@ class PWGenerator:
         for i in range(self.pwlength):
             try:
                 self.pw.append(random.choice(self.uppercase + self.lowercase + self.numbers + self.symbols + self.yoursymbols))
-
-
             except:
                 self.listpw.insert(END, "Couldnt create your Password")
 
