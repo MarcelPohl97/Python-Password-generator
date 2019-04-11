@@ -98,13 +98,11 @@ class PWGenerator:
         self.yoursymbols = self.entry_symbols.get()
         self.pwlength = int(self.spinbox.get())
         self.pw = []
-
         for i in range(self.pwlength):
             try:
                 self.pw.append(random.choice(self.uppercase + self.lowercase + self.numbers + self.symbols + self.yoursymbols))
             except:
                 self.listpw.insert(END, "Couldnt create your Password")
-
         pwlist = "".join(self.pw)
         self.listpw.insert(END, pwlist)
         print(pwlist)
